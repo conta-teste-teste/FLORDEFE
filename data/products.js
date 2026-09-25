@@ -1,0 +1,80 @@
+export const products = [
+  {
+    id: 'TP-001',
+    name: 'Terço Personalizado Batizado',
+    category: 'Batizado',
+    collection: 'Celebrações',
+    price: 'Sob consulta',
+    description: 'Uma lembrança delicada para celebrar o início de uma caminhada de fé.',
+    accent: 'Lilás suave',
+    badge: 'Mais pedido',
+    colors: ['Lilás', 'Branco', 'Rosa', 'Azul'],
+    medals: ['Nossa Senhora Aparecida', 'Nossa Senhora das Graças', 'Sagrada Família'],
+    quantities: ['10', '20', '30', '50', '100']
+  },
+  {
+    id: 'TP-002',
+    name: 'Terço Primeira Comunhão',
+    category: 'Primeira Comunhão',
+    collection: 'Sacramentos',
+    price: 'Sob consulta',
+    description: 'Um detalhe de fé pensado para tornar a Primeira Comunhão ainda mais inesquecível.',
+    accent: 'Pérola',
+    badge: 'Elegante',
+    colors: ['Pérola', 'Branco', 'Champagne', 'Lilás'],
+    medals: ['Eucaristia', 'Nossa Senhora das Graças', 'Sagrado Coração'],
+    quantities: ['10', '20', '30', '50', '100']
+  },
+  {
+    id: 'TP-003',
+    name: 'Terço Nossa Senhora Aparecida',
+    category: 'Devocional',
+    collection: 'Devoção',
+    price: 'Sob consulta',
+    description: 'Uma peça devocional com acabamento delicado e opções de personalização.',
+    accent: 'Azul profundo',
+    badge: 'Devocional',
+    colors: ['Azul', 'Branco', 'Cristal', 'Lilás'],
+    medals: ['Nossa Senhora Aparecida', 'Nossa Senhora das Graças'],
+    quantities: ['1', '5', '10', '20', '30']
+  },
+  {
+    id: 'TP-004',
+    name: 'Terço Lembrança de Casamento',
+    category: 'Casamento',
+    collection: 'Celebrações',
+    price: 'Sob consulta',
+    description: 'Uma lembrança com significado para convidados, padrinhos e familiares.',
+    accent: 'Champagne',
+    badge: 'Novo',
+    colors: ['Champagne', 'Pérola', 'Branco', 'Rosé'],
+    medals: ['Sagrada Família', 'Nossa Senhora das Graças'],
+    quantities: ['20', '30', '50', '80', '100']
+  },
+  {
+    id: 'TP-005',
+    name: 'Terço Infantil Personalizado',
+    category: 'Infantil',
+    collection: 'Infantil',
+    price: 'Sob consulta',
+    description: 'Cores suaves, nome personalizado e uma composição cheia de afeto.',
+    accent: 'Rosa doce',
+    badge: 'Delicado',
+    colors: ['Rosa', 'Azul', 'Lilás', 'Branco'],
+    medals: ['Anjo da Guarda', 'Sagrada Família', 'Nossa Senhora Aparecida'],
+    quantities: ['1', '5', '10', '20', '30']
+  },
+  {
+    id: 'TP-006',
+    name: 'Mini Terço Lembrancinha',
+    category: 'Lembrancinhas',
+    collection: 'Eventos',
+    price: 'Sob consulta',
+    description: 'Pequeno no tamanho, especial no significado. Ideal para eventos e celebrações.',
+    accent: 'Cristal',
+    badge: 'Para eventos',
+    colors: ['Cristal', 'Branco', 'Lilás', 'Rosa'],
+    medals: ['Nossa Senhora Aparecida', 'Nossa Senhora das Graças', 'Espírito Santo'],
+    quantities: ['20', '30', '50', '100', '150']
+  }
+];
