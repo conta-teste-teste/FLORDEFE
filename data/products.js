@@ -1,6 +1,7 @@
 export const products = [
   {
     id: 'TP-001',
+    image: '/images/batizado.webp',
     name: 'Terço Personalizado Batizado',
     category: 'Batizado',
     collection: 'Celebrações',
@@ -14,6 +15,7 @@ export const products = [
   },
   {
     id: 'TP-002',
+    image: '/images/primeira-comunhao.webp',
     name: 'Terço Primeira Comunhão',
     category: 'Primeira Comunhão',
     collection: 'Sacramentos',
@@ -27,6 +29,7 @@ export const products = [
   },
   {
     id: 'TP-003',
+    image: '/images/hero-principal.webp',
     name: 'Terço Nossa Senhora Aparecida',
     category: 'Devocional',
     collection: 'Devoção',
@@ -40,6 +43,7 @@ export const products = [
   },
   {
     id: 'TP-004',
+    image: '/images/casamento.webp',
     name: 'Terço Lembrança de Casamento',
     category: 'Casamento',
     collection: 'Celebrações',
@@ -53,6 +57,7 @@ export const products = [
   },
   {
     id: 'TP-005',
+    image: '/images/tercos-infantis.webp',
     name: 'Terço Infantil Personalizado',
     category: 'Infantil',
     collection: 'Infantil',

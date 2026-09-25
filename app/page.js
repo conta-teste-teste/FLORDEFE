@@ -115,7 +115,9 @@ export default function Home() {
           <div className="hero-orbit orbit-b" />
           <div className="hero-product-card glass-card">
             <div className="hero-card-top"><span>Flor de Fé</span><span>01 — 26</span></div>
-            <RosaryArt label="Terço Flor de Fé" />
+            <div className="hero-photo-wrap">
+              <img className="hero-photo" src="/images/hero-principal.webp" alt="Terço personalizado Flor de Fé" />
+            </div>
             <div className="hero-card-bottom">
               <div><span>coleção</span><strong>Essência</strong></div>
               <div className="mini-chip">personalize</div>
@@ -144,12 +146,14 @@ export default function Home() {
 
         <div className="collection-grid">
           {[
-            ['01', 'Batizado', 'Delicadeza para o começo de uma caminhada de fé.'],
-            ['02', 'Casamento', 'Lembranças que unem significado e elegância.'],
-            ['03', 'Primeira Comunhão', 'Um marco espiritual transformado em memória.'],
-            ['04', 'Lembranças', 'Pequenos gestos que permanecem para sempre.']
-          ].map(([n, title, copy], index) => (
-            <a href="#catalogo" className={`collection-card c${index + 1}`} key={title} onClick={() => setActiveCategory(title === 'Lembranças' ? 'Lembrancinhas' : title)}>
+            ['01', 'Batizado', 'Delicadeza para o começo de uma caminhada de fé.', '/images/batizado.webp'],
+            ['02', 'Casamento', 'Lembranças que unem significado e elegância.', '/images/casamento.webp'],
+            ['03', 'Primeira Comunhão', 'Um marco espiritual transformado em memória.', '/images/primeira-comunhao.webp'],
+            ['04', 'Infantil', 'Peças delicadas para celebrar a fé desde os primeiros momentos.', '/images/tercos-infantis.webp']
+          ].map(([n, title, copy, image], index) => (
+            <a href="#catalogo" className={`collection-card c${index + 1}`} key={title} onClick={() => setActiveCategory(title)}>
+              <img className="collection-image" src={image} alt="" aria-hidden="true" />
+              <div className="collection-overlay" />
               <span className="collection-number">{n}</span>
               <div className="collection-symbol">✦</div>
               <div><h3>{title}</h3><p>{copy}</p></div>
@@ -157,6 +161,19 @@ export default function Home() {
             </a>
           ))}
         </div>
+      </section>
+
+      <section className="editorial-showcase shell" aria-label="Destaques Flor de Fé">
+        <a className="editorial-card editorial-personalizados" href="#catalogo" onClick={() => setActiveCategory('Todos')}>
+          <img src="/images/tercos-personalizados.webp" alt="Terço personalizado com nome" />
+          <div className="editorial-shade" />
+          <div className="editorial-content"><span>Personalizados</span><h3>Seu nome. Sua devoção. Sua história.</h3><p>Detalhes escolhidos para transformar cada peça em algo único.</p></div>
+        </a>
+        <a className="editorial-card editorial-feminino" href="#catalogo" onClick={() => setActiveCategory('Todos')}>
+          <img src="/images/feminino-delicado.webp" alt="Terço feminino delicado em tons lilás" />
+          <div className="editorial-shade" />
+          <div className="editorial-content"><span>Feminino delicado</span><h3>Leveza, cor e significado.</h3><p>Composições suaves para presentes, devoção e momentos especiais.</p></div>
+        </a>
       </section>
 
       <section className="catalog-section" id="catalogo">
@@ -181,7 +198,7 @@ export default function Home() {
                 <div className="product-visual">
                   <div className="badge">{product.badge}</div>
                   <div className="code">{product.id}</div>
-                  <RosaryArt label={product.name} />
+                  {product.image ? <img className="product-photo" src={product.image} alt={product.name} /> : <RosaryArt label={product.name} />}
                   <button className="quick-button" onClick={() => openProduct(product)}>Personalizar <ArrowIcon /></button>
                 </div>
                 <div className="product-info">
@@ -243,7 +260,7 @@ export default function Home() {
         <div className="modal-backdrop" onMouseDown={(e) => e.target === e.currentTarget && setSelected(null)}>
           <div className="modal" role="dialog" aria-modal="true" aria-label={`Personalizar ${selected.name}`}>
             <button className="modal-close" onClick={() => setSelected(null)} aria-label="Fechar">×</button>
-            <div className="modal-visual"><RosaryArt label={selected.name} /><span>{selected.id}</span></div>
+            <div className="modal-visual">{selected.image ? <img className="modal-photo" src={selected.image} alt={selected.name} /> : <RosaryArt label={selected.name} />}<span>{selected.id}</span></div>
             <div className="modal-content">
               <span className="eyebrow">Personalize seu terço</span>
               <h2>{selected.name}</h2>

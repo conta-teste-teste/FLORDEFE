@@ -261,3 +261,47 @@ svg { width: 18px; height: 18px; fill: none; stroke: currentColor; stroke-width:
 @media (prefers-reduced-motion: reduce) {
   * { scroll-behavior: auto !important; animation: none !important; transition: none !important; }
 }
+
+/* Imagens reais Flor de Fé */
+.hero-photo-wrap { position: relative; z-index: 2; min-height: 430px; margin: 14px 0 16px; border-radius: 26px; overflow: hidden; background: #f3f0f5; }
+.hero-photo { width: 100%; height: 430px; display: block; object-fit: cover; object-position: 72% center; transform: scale(1.02); }
+
+.collection-image { position: absolute !important; inset: 0; width: 100%; height: 100%; object-fit: cover; z-index: 0 !important; transition: transform .55s ease; }
+.collection-card:hover .collection-image { transform: scale(1.035); }
+.collection-overlay { position: absolute !important; inset: 0; z-index: 1 !important; background: linear-gradient(180deg, rgba(27,23,33,.04) 15%, rgba(27,23,33,.16) 50%, rgba(27,23,33,.78) 100%); }
+.collection-card::before { display: none; }
+.collection-card .collection-number, .collection-card .collection-symbol, .collection-card h3, .collection-card p, .collection-card .circle-arrow { color: white; text-shadow: 0 2px 18px rgba(25,20,31,.22); }
+.collection-card p { color: rgba(255,255,255,.82); }
+.collection-card .circle-arrow { border-color: rgba(255,255,255,.55); background: rgba(255,255,255,.12); backdrop-filter: blur(9px); }
+.collection-card .collection-symbol { opacity: .92; }
+
+.editorial-showcase { display: grid; grid-template-columns: 1.12fr .88fr; gap: 20px; padding-bottom: 120px; }
+.editorial-card { min-height: 520px; border-radius: 34px; overflow: hidden; position: relative; display: flex; align-items: end; box-shadow: 0 28px 70px rgba(70,56,94,.11); }
+.editorial-card img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; transition: transform .55s ease; }
+.editorial-card:hover img { transform: scale(1.025); }
+.editorial-personalizados img { object-position: center; }
+.editorial-feminino img { object-position: center; }
+.editorial-shade { position: absolute; inset: 0; background: linear-gradient(180deg, rgba(31,26,38,.02) 25%, rgba(31,26,38,.82) 100%); }
+.editorial-content { position: relative; z-index: 2; color: white; padding: 34px; max-width: 520px; }
+.editorial-content > span { display: inline-block; font-size: 10px; font-weight: 800; letter-spacing: .14em; text-transform: uppercase; color: rgba(255,255,255,.72); margin-bottom: 12px; }
+.editorial-content h3 { font-family: Georgia, serif; font-size: clamp(30px, 3vw, 46px); line-height: 1.04; font-weight: 400; margin: 0 0 12px; }
+.editorial-content p { margin: 0; max-width: 440px; color: rgba(255,255,255,.72); line-height: 1.6; font-size: 12px; }
+
+.product-photo { width: 100%; height: 410px; object-fit: cover; display: block; transition: transform .45s ease; }
+.product-card:hover .product-photo { transform: scale(1.025); }
+.modal-photo { width: 100%; height: 620px; object-fit: cover; display: block; }
+
+@media (max-width: 980px) {
+  .editorial-showcase { grid-template-columns: 1fr; }
+  .editorial-card { min-height: 460px; }
+  .modal-photo { height: 380px; }
+}
+
+@media (max-width: 640px) {
+  .hero-photo-wrap { min-height: 320px; }
+  .hero-photo { height: 320px; object-position: 72% center; }
+  .editorial-showcase { padding-bottom: 88px; }
+  .editorial-card { min-height: 390px; border-radius: 26px; }
+  .editorial-content { padding: 25px; }
+  .product-photo { height: 370px; }
+}

@@ -39,3 +39,15 @@ Edite `data/products.js` para trocar nomes, categorias, opções e textos.
 
 ## Fotos reais
 Nesta versão o site usa uma ilustração abstrata como placeholder de produto. Quando as fotos reais forem enviadas, substitua a área visual de cada card por imagens em `public/produtos/`.
+
+
+## Imagens integradas nesta versao
+- Hero principal
+- Batizado
+- Casamento
+- Primeira Comunhao
+- Tercos infantis
+- Tercos personalizados
+- Feminino delicado
+
+As demais secoes continuam prontas para receber novas imagens conforme forem enviadas.
